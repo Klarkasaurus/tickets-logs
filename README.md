@@ -1,6 +1,7 @@
 # Ticket Logs
 
-Example IT tickets written in YAML format to simulate real-world helpdesk and sysadmin scenarios.
+Taking real life IT tickets written in YAML format to simulate real-world helpdesk and sysadmin scenarios.
+These are all problems from friends, family and problems I've had myself and resolved.
 
 # Contents
 | File | Description |
