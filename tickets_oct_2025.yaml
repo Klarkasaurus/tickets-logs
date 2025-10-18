@@ -1,0 +1,14 @@
+# General fixes (tickets)
+
+Date: 18/10/25 15:30
+TicketID: 001
+Title: Can't view websites
+Symptom: User reports they can't view any websites on browser.
+Diagnosis: 
+- Checked connection which was fine. 
+- Checked ipconfig to see if DHCP was down and it wasn't. 
+- Checked to see if VPN was being used. They were using cloudflare which was stopping connection.
+Action:
+- Disabled cloudflare. Internet was working which reset cloudflare and was able to turn back on.
+Resolution: Resolved
+
