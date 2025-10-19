@@ -1,15 +1,52 @@
 # General fixes for friends and family (tickets)
 
-- Date: "2025-10-18 15:30"
-  TicketID: "001"
-  Title: "Can't view websites"
-  Symptom: "User reports they can't view any websites on browser."
-  Diagnosis:
-    - "Checked connection which was fine."
-    - "Checked ipconfig to see if DHCP was down and it wasn't."
-    - "Checked to see if VPN was being used."
-    - "They were using Cloudflare which was stopping connection."
-  Action:
-    - "Disabled Cloudflare."
-    - "Internet was working which reset Cloudflare and was able to turn back on."
-  Resolution: "Resolved"
+# No websites loading.
+Date: 2025-10-18 15:30
+TicketID: 001
+Title: "Can't view websites"
+Symptom: "User reports they can't view any websites on browser."
+Diagnosis:
+  - Checked connection with ipconfig which was fine.
+  - Checked ipconfig to see if DHCP was down and it wasn't.
+  - Checked to see if VPN was being used.
+  - Cloudflare was stopping connection.
+Action:
+  - Temporarily disabled Cloudflare.
+  - Confirmed internet connection.
+  - Enabled Cloudflare.
+  - Confirmed websites loading in browser.
+  Resolution: Website access resolved after temporarily disabling Cloudflare.
+  Status: Closed
+
+# No option to connect to internet.
+Date: "19-10-2025 09:00"
+TicketID: "002"
+Title: "Can't Connect to internet"
+Symptom: "User reports they can't connect to the internet."
+Diagnosis:
+  - Ethernet cable connected correctly.
+  - ipconfig shows no active connection.
+  - Ethernet adapter found disabled in Device Manager.
+Action:
+  - Tested ethernet cable for connectivity using a cable tester.
+  - Ran ipconfig to test connection.
+  - Enabled Network Adapter in Device Manager
+  - Verified internet connection restored
+Resolution: Internet issue resolved after Enabling Network Adapter in Device manager.
+Status: Closed
+
+# Printer Not Working
+Date: "19-10-2025 10:15"
+TicketID: "003"
+Title: "Printer Not Printing"
+Symptom: "User reports printer is not responding to print jobs."
+Diagnosis:
+  - Printer queue contained multiple stuck jobs.
+  - Printer was online but showing an error light.
+  - Test page failed to print.
+Action:
+  - Cleared print queue.
+  - Restarted printer and print spooler service.
+  - Printed a test page successfully.
+Resolution: Printer issue resolved after clearing queue and restarting spooler.
+Status: Closed
