@@ -50,3 +50,24 @@ Action:
   - Printed a test page successfully.
 Resolution: Printer issue resolved after clearing queue and restarting spooler.
 Status: Closed
+
+# Connect to GitHub through powershell (My own problem)
+Date: "19-10-2025 12:00"
+TicketID: "004"
+Title: "Can't connect to GitHub through powershell"
+Symptom: "User says they cannot connect to their GitHub repository. They have made a SSH keygen and placed it into the GitHub settings."
+Diagnosis:
+	- SSH client not installed.
+	- SSH Key is not valid.
+	- GitHub public key permission denied.
+Action:
+	- Installed GitHub from official website.
+	- Restarted PC.
+	- Configured ssh-agent to run automatically on startup.
+	- Started ssh-agent.
+	- Added the users SSH private key to agent.
+	- Confirmed the key is loaded.
+	- Tested connection to GitHub with ssh -T git@github.com.
+	- Explained to user how to clone their repository.
+Resolution: "GitHub connection resolved by installing SSH and configuring properly. Explained to the user how to connect to their repository."
+Status: "Closed"
