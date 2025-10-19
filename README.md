@@ -7,7 +7,7 @@ These are all problems from friends, family and problems I've had myself and res
 | File | Description |
 |------|--------------|
 | `tickets_oct_2025.yml` | October troubleshooting logs |
-| `tickets_nov_2025.yml` | November troubleshooting logs |
+| `tickets_nov_2025.yml` | November troubleshooting logs | `To be added`
 
 ## Purpose
 This helps me practice documenting, resolving, and tracking technical issues.
