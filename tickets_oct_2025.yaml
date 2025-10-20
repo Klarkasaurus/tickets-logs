@@ -71,3 +71,22 @@ Action:
   - Explained to user how to clone their repository.
 Resolution: "GitHub connection resolved by installing SSH and configuring properly. Explained to the user how to connect to their repository."
 Status: "Closed"
+
+# Wi-Fi Not Connecting
+Date: "20-10-2025 20:30"
+TicketID: "005"
+Title: "Wi-Fi Connection Issue"
+Symptom: "User reports Wi-Fi keeps disconnecting."
+Diagnosis:
+  - Wi-Fi network visible but repeatedly dropping connection.
+  - Signal strength weak due to distance from access point.
+  - Other devices near AP unaffected.
+Action:
+  - Moved user workstation closer to access point.
+  - Updated Wi-Fi adapter driver.
+  - Verified stable connection after changes.
+  - Advised user to possibly purchase Wi-Fi boost if they plan to use device at distance.
+Resolution: "Wi-Fi connection stabilized after moving closer and updating drivers."
+Status: "Closed"
+
+
