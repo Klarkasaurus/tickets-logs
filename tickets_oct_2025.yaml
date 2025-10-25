@@ -89,4 +89,22 @@ Action:
 Resolution: "Wi-Fi connection stabilized after moving closer and updating drivers."
 Status: "Closed"
 
-
+# Mouse not working
+Date: "25/10/2025 09:05"
+TicketID: "006"
+Title: "My mouse stopped working"
+Symptom: "Hi, my mouse just stopped working all of a sudden. I was using it earlier today and it was fine. Now it doesn’t move or click anything. I’ve tried moving it around and nothing happens."
+Diagnosis: 
+  - Asked the user to see if the mouse is connected to the USB port properly.
+  - Asked the user to use another USB port.
+  - Asked the user to restart the PC.
+  - Asked user to try the mouse on another PC.
+  - Asked the user try another mouse.
+Action:
+  - User checked mouse is connected correctly.
+  - User tried another port.
+  - User restarted PC.
+  - User tried the mouse on another PC.
+  - User connected a new mouse which worked.
+Resolution: "Mouse was defective and not working on users PC or anyone else's which confirmed the mouse is defective. User gave the mouse to their manager. Recommended replacement mouse."
+Status: "Closed"
