@@ -4,7 +4,7 @@
 Date: 2025-10-18 15:30
 TicketID: 001
 Title: "Can't view websites"
-Symptom: "User reports they can't view any websites on browser."
+Symptom/Message: "User reports they can't view any websites on browser."
 Diagnosis:
   - Checked connection with ipconfig which was fine.
   - Checked ipconfig to see if DHCP was down and it wasn't.
@@ -22,7 +22,7 @@ Action:
 Date: "19-10-2025 09:00"
 TicketID: "002"
 Title: "Can't Connect to internet"
-Symptom: "User reports they can't connect to the internet."
+Symptom/Message: "User reports they can't connect to the internet."
 Diagnosis:
   - Ethernet cable connected correctly.
   - ipconfig shows no active connection.
@@ -39,7 +39,7 @@ Status: Closed
 Date: "19-10-2025 10:15"
 TicketID: "003"
 Title: "Printer Not Printing"
-Symptom: "User reports printer is not responding to print jobs."
+Symptom/Message: "User reports printer is not responding to print jobs."
 Diagnosis:
   - Printer queue contained multiple stuck jobs.
   - Printer was online but showing an error light.
@@ -55,7 +55,7 @@ Status: Closed
 Date: "19-10-2025 12:00"
 TicketID: "004"
 Title: "Can't connect to GitHub through powershell"
-Symptom: "User says they cannot connect to their GitHub repository. They have made a SSH keygen and placed it into the GitHub settings."
+Symptom/Message: "User says they cannot connect to their GitHub repository. They have made a SSH keygen and placed it into the GitHub settings."
 Diagnosis:
   - SSH client not installed.
   - SSH Key is not valid.
@@ -76,7 +76,7 @@ Status: "Closed"
 Date: "20-10-2025 20:30"
 TicketID: "005"
 Title: "Wi-Fi Connection Issue"
-Symptom: "User reports Wi-Fi keeps disconnecting."
+Symptom/Message: "User reports Wi-Fi keeps disconnecting."
 Diagnosis:
   - Wi-Fi network visible but repeatedly dropping connection.
   - Signal strength weak due to distance from access point.
@@ -90,16 +90,13 @@ Resolution: "Wi-Fi connection stabilized after moving closer and updating driver
 Status: "Closed"
 
 # Mouse not working
-Date: "25/10/2025 09:05"
+Date: "25-10-2025 09:05"
 TicketID: "006"
 Title: "My mouse stopped working"
-Symptom: "Hi, my mouse just stopped working all of a sudden. I was using it earlier today and it was fine. Now it doesn’t move or click anything. I’ve tried moving it around and nothing happens."
+Symptom/Message: "Hi, my mouse just stopped working all of a sudden. I was using it earlier today and it was fine. Now it doesn’t move or click anything. I’ve tried moving it around and nothing happens."
 Diagnosis: 
-  - Asked the user to see if the mouse is connected to the USB port properly.
-  - Asked the user to use another USB port.
-  - Asked the user to restart the PC.
-  - Asked user to try the mouse on another PC.
-  - Asked the user try another mouse.
+  - Verified mouse was not functioning on users PC by trying another Port.
+  - Tried USB mouse on another PC which was unsuccesful.
 Action:
   - User checked mouse is connected correctly.
   - User tried another port.
@@ -107,4 +104,22 @@ Action:
   - User tried the mouse on another PC.
   - User connected a new mouse which worked.
 Resolution: "Mouse was defective and not working on users PC or anyone else's which confirmed the mouse is defective. User gave the mouse to their manager. Recommended replacement mouse."
+Status: "Closed"
+
+# Outlook asking for password
+Date: "25-10-2025 17:15"
+TicketID: "007"
+Title: "Outlook keeps asking for my password"
+Symptom/Message: "Hey, every time I open Outlook, it keeps asking me to enter my email password. I type it in, it accepts it for a bit, then like 10 minutes later it pops up again asking for it. It’s super annoying — I can’t get any work done."
+Diagnosis:
+  - Cached credentials in Windows Credential Manager causing authentication conflict.
+Action:
+  - Closing and reopening Outlook.
+  - Asked if password has been changed recently.
+  - Made sure windows was up to date.
+  - Repaired app through Outlooks app settings.
+  - Cleared old Outlook/Microsoft credentials by going into Credential manager and removing entries for Outlook and Microsoft 365.
+  - Restarted Outlook and reauthenticated successfully
+Resolution: "User was being asked to sign in whilst using Outlook. User reset there Windows Credentials which resolved the problem."
+Note: Forgot to ask user to sign in and out of Outlook first.
 Status: "Closed"
