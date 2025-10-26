@@ -160,3 +160,20 @@ Action:
 Resolution: "The ethernet cable connecting the printer was not connected properly. Confirmed the Ethernet cable was connected properly which brought the printer back online"
 Notes: Make sure to confirm power first and then ping the printer to see if it is online. This will make it easier to either reset the spooler or see if it is a connection issue.
 Status: "Closed"
+
+# Can't access OneDrive
+Date: "26-10-2025 16:35"
+TicketID: "010"
+Title: "I can't access my OneDrive"
+Symptom/Message: "Hi, my OneDrive isn’t syncing anymore. I keep getting a little red X on the cloud icon, and it says “We can’t connect to https://d.docs.live.net…”. I also noticed some of my files are missing in File Explorer."
+Diagnosis:
+  - OneDrive account became disconnected from users account.
+Action:
+  - Confirmed the web version of the users account was working.
+  - Closed and restarted the OneDrive app.
+  - Performed a windows update.
+  - Opened settings to check if the account was still linked.
+  - User signed back into account using company email and syncing resumed.
+Resolution: "The user had been signed out of the account on the OneDrive app. User signed back in which resolved the problem."
+Notes: When OneDrive signs out unexpectedly, it’s sometimes due to expired authentication tokens.
+Status: "Closed"
