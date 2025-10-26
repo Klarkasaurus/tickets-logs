@@ -1,0 +1,162 @@
+# General fixes for friends and family (tickets)
+
+# No websites loading.
+Date: 2025-10-18 15:30
+TicketID: 001
+Title: "Can't view websites"
+Symptom/Message: "User reports they can't view any websites on browser."
+Diagnosis:
+  - Checked connection with ipconfig which was fine.
+  - Checked ipconfig to see if DHCP was down and it wasn't.
+  - Checked to see if VPN was being used.
+  - Cloudflare was stopping connection.
+Action:
+  - Temporarily disabled Cloudflare.
+  - Confirmed internet connection.
+  - Enabled Cloudflare.
+  - Confirmed websites loading in browser.
+  Resolution: Website access resolved after temporarily disabling Cloudflare.
+  Status: Closed
+
+# No option to connect to internet.
+Date: "19-10-2025 09:00"
+TicketID: "002"
+Title: "Can't Connect to internet"
+Symptom/Message: "User reports they can't connect to the internet."
+Diagnosis:
+  - Ethernet cable connected correctly.
+  - ipconfig shows no active connection.
+  - Ethernet adapter found disabled in Device Manager.
+Action:
+  - Tested ethernet cable for connectivity using a cable tester.
+  - Ran ipconfig to test connection.
+  - Enabled Network Adapter in Device Manager
+  - Verified internet connection restored
+Resolution: Internet issue resolved after Enabling Network Adapter in Device manager.
+Status: Closed
+
+# Printer Not Working
+Date: "19-10-2025 10:15"
+TicketID: "003"
+Title: "Printer Not Printing"
+Symptom/Message: "User reports printer is not responding to print jobs."
+Diagnosis:
+  - Printer queue contained multiple stuck jobs.
+  - Printer was online but showing an error light.
+  - Test page failed to print.
+Action:
+  - Cleared print queue.
+  - Restarted printer and print spooler service.
+  - Printed a test page successfully.
+Resolution: Printer issue resolved after clearing queue and restarting spooler.
+Status: Closed
+
+# Connect to GitHub through powershell (My own problem)
+Date: "19-10-2025 12:00"
+TicketID: "004"
+Title: "Can't connect to GitHub through powershell"
+Symptom/Message: "User says they cannot connect to their GitHub repository. They have made a SSH keygen and placed it into the GitHub settings."
+Diagnosis:
+  - SSH client not installed.
+  - SSH Key is not valid.
+  - GitHub public key permission denied.
+Action:
+  - Installed GitHub from official website.
+  - Restarted PC.
+  - Configured ssh-agent to run automatically on startup.
+  - Started ssh-agent.
+  - Added the users SSH private key to agent.
+  - Confirmed the key is loaded.
+  - Tested connection to GitHub with ssh -T git@github.com.
+  - Explained to user how to clone their repository.
+Resolution: "GitHub connection resolved by installing SSH and configuring properly. Explained to the user how to connect to their repository."
+Status: "Closed"
+
+# Wi-Fi Not Connecting
+Date: "20-10-2025 20:30"
+TicketID: "005"
+Title: "Wi-Fi Connection Issue"
+Symptom/Message: "User reports Wi-Fi keeps disconnecting."
+Diagnosis:
+  - Wi-Fi network visible but repeatedly dropping connection.
+  - Signal strength weak due to distance from access point.
+  - Other devices near AP unaffected.
+Action:
+  - Moved user workstation closer to access point.
+  - Updated Wi-Fi adapter driver.
+  - Verified stable connection after changes.
+  - Advised user to possibly purchase Wi-Fi boost if they plan to use device at distance.
+Resolution: "Wi-Fi connection stabilized after moving closer and updating drivers."
+Status: "Closed"
+
+# Mouse not working
+Date: "25-10-2025 09:05"
+TicketID: "006"
+Title: "My mouse stopped working"
+Symptom/Message: "Hi, my mouse just stopped working all of a sudden. I was using it earlier today and it was fine. Now it doesn’t move or click anything. I’ve tried moving it around and nothing happens."
+Diagnosis: 
+  - Verified mouse was not functioning on users PC by trying another Port.
+  - Tried USB mouse on another PC which was unsuccesful.
+Action:
+  - User checked mouse is connected correctly.
+  - User tried another port.
+  - User restarted PC.
+  - User tried the mouse on another PC.
+  - User connected a new mouse which worked.
+Resolution: "Mouse was defective and not working on users PC or anyone else's which confirmed the mouse is defective. User gave the mouse to their manager. Recommended replacement mouse."
+Status: "Closed"
+
+# Outlook asking for password
+Date: "25-10-2025 17:15"
+TicketID: "007"
+Title: "Outlook keeps asking for my password"
+Symptom/Message: "Hey, every time I open Outlook, it keeps asking me to enter my email password. I type it in, it accepts it for a bit, then like 10 minutes later it pops up again asking for it. It’s super annoying — I can’t get any work done."
+Diagnosis:
+  - Cached credentials in Windows Credential Manager causing authentication conflict.
+Action:
+  - Closing and reopening Outlook.
+  - Asked if password has been changed recently.
+  - Made sure windows was up to date.
+  - Repaired app through Outlooks app settings.
+  - Cleared old Outlook/Microsoft credentials by going into Credential manager and removing entries for Outlook and Microsoft 365.
+  - Restarted Outlook and reauthenticated successfully
+Resolution: "User was being asked to sign in whilst using Outlook. User reset there Windows Credentials which resolved the problem."
+Note: Forgot to ask user to sign in and out of Outlook first.
+Status: "Closed"
+
+# User can't access shared drive
+Date: "25-10-2025 20:03"
+TicketID: "008"
+Title: "User can't access shared drive"
+Symptom/Message: "Hi, a few people in the Marketing department just told me they can’t access the shared “M:” drive. It was working fine this morning, but now it says “The network path was not found.” I’m not sure if it’s just us or everyone."
+Diagnosis:
+  - File server named "fileserver01" is not reachable by anyone in the department.
+  - Likely the server is down and needs restarting by the network team.
+Action:
+  - Checked in file explorer to see if the drive is visible.
+  - Did a series of network tests using
+    - ping fileserver01
+    - ping the IP of the file server
+    - nslookup fileserver01
+  - Flushed DNS cache with ipconfig /flushdns.
+  - Confirmed the department was using the correct network connection via NCPL.CPL.
+  - Attempted to remap the drive with net use M: \\fileserver01\marketing
+Resolution: "No resolution at this stage as the department was still unable to connect to the shared drive. Escalated to network team to reset the server. I will respond to the user once the network team has confirmed the issue is resolved."
+Status: "Open"
+
+# Printer not printing
+Date: "26-19-2025 10:31"
+TicketID: "009"
+Title: "My printer isn't printing"
+Symptom: "Hi, I’ve been trying to print a few documents this morning, but nothing’s coming out. It just says “Printing…” in the queue and never actually prints."
+Diagnosis:
+  - Loose ethernet cable on printer
+Action:
+  - Confirmed the printer is powered on.
+  - Reset print spooler on PowerShell with Restart-Service -name Spooler
+  - Confirmed is printer is online or offline via Devices and Printers.
+  - Ping the printers IP to see if it is online. 
+  - Examined ethernet connection which was confirmed to be loose.
+Resolution: "The ethernet cable connecting the printer was not connected properly. Confirmed the Ethernet cable was connected properly which brought the printer back online"
+Notes: Make sure to confirm power first and then ping the printer to see if it is online. This will make it easier to either reset the spooler or see if it is a connection issue.
+Status: "Closed"
