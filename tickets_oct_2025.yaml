@@ -143,3 +143,20 @@ Action:
   - Attempted to remap the drive with net use M: \\fileserver01\marketing
 Resolution: "No resolution at this stage as the department was still unable to connect to the shared drive. Escalated to network team to reset the server. I will respond to the user once the network team has confirmed the issue is resolved."
 Status: "Open"
+
+# Printer not printing
+Date: "26-19-2025 10:31"
+TicketID: "009"
+Title: "My printer isn't printing"
+Symptom: "Hi, I’ve been trying to print a few documents this morning, but nothing’s coming out. It just says “Printing…” in the queue and never actually prints."
+Diagnosis:
+  - Loose ethernet cable on printer
+Action:
+  - Confirmed the printer is powered on.
+  - Reset print spooler on PowerShell with Restart-Service -name Spooler
+  - Confirmed is printer is online or offline via Devices and Printers.
+  - Ping the printers IP to see if it is online. 
+  - Examined ethernet connection which was confirmed to be loose.
+Resolution: "The ethernet cable connecting the printer was not connected properly. Confirmed the Ethernet cable was connected properly which brought the printer back online"
+Notes: Make sure to confirm power first and then ping the printer to see if it is online. This will make it easier to either reset the spooler or see if it is a connection issue.
+Status: "Closed"
