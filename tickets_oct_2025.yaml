@@ -123,3 +123,23 @@ Action:
 Resolution: "User was being asked to sign in whilst using Outlook. User reset there Windows Credentials which resolved the problem."
 Note: Forgot to ask user to sign in and out of Outlook first.
 Status: "Closed"
+
+# User can't access shared drive
+Date: "25-10-2025 20:03"
+TicketID: "008"
+Title: "User can't access shared drive"
+Symptom/Message: "Hi, a few people in the Marketing department just told me they can’t access the shared “M:” drive. It was working fine this morning, but now it says “The network path was not found.” I’m not sure if it’s just us or everyone."
+Diagnosis:
+  - File server named "fileserver01" is not reachable by anyone in the department.
+  - Likely the server is down and needs restarting by the network team.
+Action:
+  - Checked in file explorer to see if the drive is visible.
+  - Did a series of network tests using
+    - ping fileserver01
+    - ping the IP of the file server
+    - nslookup fileserver01
+  - Flushed DNS cache with ipconfig /flushdns.
+  - Confirmed the department was using the correct network connection via NCPL.CPL.
+  - Attempted to remap the drive with net use M: \\fileserver01\marketing
+Resolution: "No resolution at this stage as the department was still unable to connect to the shared drive. Escalated to network team to reset the server. I will respond to the user once the network team has confirmed the issue is resolved."
+Status: "Open"
