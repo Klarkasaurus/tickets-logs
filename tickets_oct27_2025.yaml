@@ -30,3 +30,19 @@ Action:
 Resolution: "Updated the display driver. Rebooted the laptop which resolved the problem and is now back to full brightness."
 Notes: Check windows power plan first before making changes.
 Status: "Closed"
+
+# Network disconnecting
+Date: "26-10-2025 18:30"
+TicketID: "013"
+Title: "My network keeps disconnecting randomly"
+Symptom/Message: "Hi, my internet connection keeps dropping out every few minutes. It reconnects after a bit, but it’s really annoying — especially during Teams calls."
+Diagnosis:
+  - Weak wireless signal due to distance from access point.
+Action:
+  - Asked to check how many bars the Wi-Fi icon is showing.
+  - Asked user how far they are from the access point.
+  - Confirmed the signal increased and was stable when moving closer to the access point.
+  - Contacted network team to either change the channel to 2.4/5GHz or if it is already on that band then install another access point closer to the office.
+Resolution: "Confirmed stable connection when near AP and escalated to Network Team to assess channel/band coverage or add additional AP. Temporary workaround provided by asking the customer to work closer to the access point for now."
+Notes: Use "netsh wlan show interfaces". Record what band the Wi-Fi is running on to send to the network team.
+Status: "Open: Pending network team action."
