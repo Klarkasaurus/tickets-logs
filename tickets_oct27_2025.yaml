@@ -16,3 +16,17 @@ Action:
 Resolution: "Ran the PowerShell command to reset each machines password with the domain and confirmed each one was fully operational after the process."
 Notes: Note affected machines. If this issue recurs often, it may point to outdated machine accounts, restore from old images, or domain replication delays. Worth monitoring.
 Status: "Closed"
+
+# Laptop screen dim
+Date: "27-10-2025 17:48"
+TicketID: "012"
+Title: "My screen is really dim"
+Symptom/Message: "Hi, my laptop screen suddenly went really dim this morning. Even when I plug in the charger, it doesn’t brighten up. I tried turning the brightness up with the keys, but it barely changes."
+Diagnosis:
+  - Outdated display driver affecting brightness control.
+Action:
+  - Confirmed the power connection was stable and charging.
+  - Updated the Display adapter driver in Device mananager.
+Resolution: "Updated the display driver. Rebooted the laptop which resolved the problem and is now back to full brightness."
+Notes: Check windows power plan first before making changes.
+Status: "Closed"
