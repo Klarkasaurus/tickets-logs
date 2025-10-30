@@ -80,4 +80,18 @@ Resolution: "Changed sound output to speakers from Volume."
 Notes: "For users with docking stations or Bluetooth headsets, it’s worth mentioning that Windows can automatically switch outputs when devices connect/disconnect."
 Status: "Closed"
 
-
+# Shared mailbox not showing
+Date: "30-10-2025 20:58"
+TicketID: "016"
+Title: "My shared mailbox is not showing in outlook anymore"
+Symptom/Message: "Hi Klark, I usually have a shared mailbox for our “Support@company.com” emails in Outlook, but it’s suddenly disappeared this morning. I didn’t remove it myself — it just stopped showing up in the folder list.
+Diagnosis:
+  - The user was not set up in the shared mailbox
+Actions:
+  - Confirmed no one else in the department was having the same problem.
+  - Logged into M365 Admin and checked Shared Mailbox to see if the user was on the list.
+  - Added the user back to the shared mailbox list.
+  - Ran gpupdate /force on users PC and confirmed the mailbox was showing.
+Resolution: "User had been removed from the shared mailbox members list. Re-added the user.
+Notes: "Sometimes permission changes can take several hours to sync in Exchange Online — running Outlook /resetnavpane or removing/re-adding the profile can speed it up if the mailbox still doesn’t appear."
+Status: "Closed"
