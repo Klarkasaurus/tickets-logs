@@ -46,3 +46,9 @@ Action:
 Resolution: "Confirmed stable connection when near AP and escalated to Network Team to assess channel/band coverage or add additional AP. Temporary workaround provided by asking the customer to work closer to the access point for now."
 Notes: Use "netsh wlan show interfaces". Record what band the Wi-Fi is running on to send to the network team.
 Status: "Open: Pending network team action."
+
+# Group policy not applying for users
+Date: "30-10-2025 17:13"
+TicketID: "014"
+Title: "Group policy not applpying for new users"
+Symptom/Message" 
