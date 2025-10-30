@@ -51,4 +51,33 @@ Status: "Open: Pending network team action."
 Date: "30-10-2025 17:13"
 TicketID: "014"
 Title: "Group policy not applpying for new users"
-Symptom/Message" 
+Symptom/Message: "Hey Klark, we’ve had a few new starters join this week, and it looks like the Group Policy settings aren’t applying properly on their PCs. They’re supposed to get our standard desktop background and mapped drives automatically, but none of those are showing up. Logging off/on doesn’t help."
+Diagnosis:
+  - The affected users were not in the correct OU which meant they were not using the correct GPO.
+Action:
+  - Confirmed the affected user from the person reporting the problem.
+  - Open Active Directory Users and Computers on Windows Server and checked to see if the users were in the correct OU.
+  - Moved the users into the correct OU
+  - Confirmed the GPO was set to Enforced by right clicking the GPO in the OU for new users
+  - Ran gpupdate /force on each of the affected computers remotely to confirm the GPO was updated and running.
+  - Verified settings were applied on each computer.
+Resolution: "Issue resolved by moving the affected users into the correct OU in Active Directory."
+Notes: "I can make a PowerShell script to check for users not in the correct OU. Do this for next time."
+Status: "Closed"
+
+# No sound
+Date: "30-10-2025 18:20"
+TicketID: "015"
+Title: "My sound isn't working"
+Symptom/Message: "Hi Klark, I can’t hear anything from my laptop anymore. It was working fine yesterday, but today there’s no sound at all — even on YouTube or Teams."
+Diagnosis:
+  - The audio output was set to headphones and not speaker.
+Actions:
+  - Confirmed no changes were made since the problem occurred.
+  - Adjusted volume slider which was working correctly.
+  - Set the sound output to speakers from Select sound output in volume icon in taskbar.
+Resolution: "Changed sound output to speakers from Volume."
+Notes: "For users with docking stations or Bluetooth headsets, it’s worth mentioning that Windows can automatically switch outputs when devices connect/disconnect."
+Status: "Closed"
+
+
