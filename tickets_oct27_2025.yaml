@@ -95,3 +95,22 @@ Actions:
 Resolution: "User had been removed from the shared mailbox members list. Re-added the user.
 Notes: "Sometimes permission changes can take several hours to sync in Exchange Online — running Outlook /resetnavpane or removing/re-adding the profile can speed it up if the mailbox still doesn’t appear."
 Status: "Closed"
+
+# Can't access files in shared folder
+Date: "1/11/2025 9:35"
+TicketID: "017"
+Title: "Users can’t access files on the \fs01\Projects share after yesterday’s update"
+Symptom/Message: "Hi Klark, after the Windows Server updates last night, several users can’t access our shared drive \\fs01\Projects. They’re getting an “Access Denied” error when they try to open it. The strange thing is — the Home drive (\\fs01\Home) works fine, it’s only the Projects share that’s broken."
+Diagnosis:
+  - Access was removed for the users to use the shared folder.
+  - Access denied when trying to use the shared folder.
+Actions:
+  - Confirm the shared folder is online and accessible locally.
+  - Try to access the shared folder from a users account.
+  - Change permissions on the shared folder to allow the affected users access.
+  - Confirmed the share is now working for the affected users.
+Resolution: "The users were unable to use the shared folder due to permissions being removed. Re-added them to the correct permissions allowing them access to the share."
+Notes: To prevent this from happening again use the powershell code to export share permissions regularly 
+  - Get-SmbShare | Get-SmbShareAccess | Export-Csv "C:\SharePermissionsBackup.csv" -NoTypeInformation
+Status: "Closed"
+
