@@ -11,7 +11,7 @@ Action:
   - Opened Active Directory Users and Account and navigated to the accounting OU to make sure no users were locked out or disabled.
   - Reset the trust relationship from each PC that was not working by running this in powershell
       Invoke-Command -ComputerName "AffectedPC" -ScriptBlock {
-	Reset-ComputerMachinePassword
+	    Reset-ComputerMachinePassword
       }
 Resolution: "Ran the PowerShell command to reset each machines password with the domain and confirmed each one was fully operational after the process."
 Notes: Note affected machines. If this issue recurs often, it may point to outdated machine accounts, restore from old images, or domain replication delays. Worth monitoring.
@@ -105,7 +105,7 @@ Diagnosis:
   - Access was removed for the users to use the shared folder.
   - Access denied when trying to use the shared folder.
 Actions:
-  - Confirm the shared folder is online and accessible locally.
+  - Confirm the shared folder is online and accessble locally.
   - Try to access the shared folder from a users account.
   - Change permissions on the shared folder to allow the affected users access.
   - Confirmed the share is now working for the affected users.
