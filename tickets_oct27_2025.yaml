@@ -97,7 +97,7 @@ Notes: "Sometimes permission changes can take several hours to sync in Exchange 
 Status: "Closed"
 
 # Can't access files in shared folder
-Date: "1/11/2025 9:35"
+Date: "1-11-2025 9:35"
 TicketID: "017"
 Title: "Users can’t access files on the \fs01\Projects share after yesterday’s update"
 Symptom/Message: "Hi Klark, after the Windows Server updates last night, several users can’t access our shared drive \\fs01\Projects. They’re getting an “Access Denied” error when they try to open it. The strange thing is — the Home drive (\\fs01\Home) works fine, it’s only the Projects share that’s broken."
@@ -110,7 +110,20 @@ Actions:
   - Change permissions on the shared folder to allow the affected users access.
   - Confirmed the share is now working for the affected users.
 Resolution: "The users were unable to use the shared folder due to permissions being removed. Re-added them to the correct permissions allowing them access to the share."
-Notes: To prevent this from happening again use the powershell code to export share permissions regularly 
+Notes: "To prevent this from happening again use the powershell code to export share permissions regularly"
   - Get-SmbShare | Get-SmbShareAccess | Export-Csv "C:\SharePermissionsBackup.csv" -NoTypeInformation
 Status: "Closed"
 
+# No signal on monitor
+Date: "1-11-2025 10:03"
+TicketID: "018"
+Title: "My monitor says ‘No Signal’"
+Symptom/Message: "Hi Klark, I came in this morning, turned on my computer, but my monitor just says “No Signal.” I tried pressing the power button, but nothing changed."
+Diagnosis:
+  - Loose HDMI cable.
+Actions: 
+  - Reconnected HDMI cable to PC and Monitor.
+  - Confirmed picture is visible.
+Resolution: "HDMI cable was loose. Reconnected HDMI cable to PC and Monitor."
+Notes: "For recurring video issues, it’s worth checking if the PC also has multiple video outputs (HDMI + DisplayPort) — sometimes Windows defaults to a different output after updates."
+Status: "Closed"
