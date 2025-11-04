@@ -1,0 +1,21 @@
+# Printer not connecting
+Date: "4-11-2025 17:07"
+TicketID: "019"
+Title: "I’m getting a message that says ‘Windows can’t connect to the printer"
+Symptom: "Hey Klark, whenever I try to print something from Word or even Notepad, I get an error pop-up saying: “Windows cannot connect to the printer. The operation failed with error 0x00000709.” This printer normally works fine — it’s the shared office printer \\printserver01\MainOfficePrinter."
+Diagnosis:
+  - The share is working normally when trying to connect.
+  - The queue is not stuck.
+  - Connection issue is local.
+  - Corrupted printer driver.
+Action:
+  - Confirmed the share printer location works.
+  - Confirmed other users are able to print.
+  - Confirmed no jobs were stuck and restarted print spooler.
+  - Confirmed permissions were granted to user.
+  - Remove the printer from Device's and Printers and re-install it manually using \\printserver01\MainOfficePrinter.
+  - Confirmed printer is online and working correctly
+  - Test a print.
+Resolution: "The print driver was corrupted. Re-installed the printer via print server"
+Notes: "If this happens frequently, you can deploy printer drivers via Group Policy Preferences to keep them synced and consistent across users."
+Status: "Closed"
