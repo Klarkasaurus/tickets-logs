@@ -1,5 +1,5 @@
-# Printer not connecting
-Date: "4-11-2025 17:07"
+# Shared drive not working after password reset
+Date: "7-12-2025 19:05"
 TicketID: "020"
 Title: "Can't access mapped drive after password change"
 Symptom: "Hi, I changed my password yesterday, and now when I try to open the S:\ drive (Accounting Shared), it pops up asking for credentials and then says:
