@@ -1,0 +1,25 @@
+# Printer not connecting
+Date: "4-11-2025 17:07"
+TicketID: "020"
+Title: "Can't access mapped drive after password change"
+Symptom: "Hi, I changed my password yesterday, and now when I try to open the S:\ drive (Accounting Shared), it pops up asking for credentials and then says:
+‘Access Denied: Incorrect username or password’.
+I am 100% typing the right password.
+
+Can you check why I can’t access the Accounting shared drive anymore? Others in my department can still access it."
+Diagnosis:
+  - The user has the right permissions set.
+  - The user is not in the correct OU on AD
+Action:
+  - Confirm the permissions are correct on the shared drive Security (Advanced) and Shared Permissions.
+  - Opened AD and located users profile. 
+  - Opened Member of tab to confirm user is still a part of accounting OU.
+  - Moved user to accounting OU
+  - Forced token on users machine with 
+    - Invoke-Command -ComputerName SarahPC -ScriptBlock { gpupdate /force }
+  - Remapped shared drive on users machine with
+    - net use s: /delete
+    - net use s: \\fs01\Accounting /persistent:yes
+Resolution: "The issue was caused by users account no longer being linked to the Accounting shared drive permissions. I restored the correct group membership and forced an update on users computer."
+Notes:
+Status: "Closed"
