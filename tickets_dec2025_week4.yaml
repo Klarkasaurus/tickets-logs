@@ -1,0 +1,18 @@
+# User account keeps locking out
+Date: "31-12-2025 14:06"
+TicketID: "021"
+Title: "User account keeps locking out"
+Symptom/Message: "Hi Klark, my account keeps locking itself out every 20–30 minutes. I unlock it, change my password, everything works for a bit, then suddenly I’m locked out again. I’m not typing the wrong password — it just keeps happening"
+Diagnosis: 
+  - Windows is causing lockout due to cached credentials. 
+  - User had changed password on home computer.
+  - Old password stored on more than one device and trying to authenticate with old password.
+Action: 
+  - Explored Event Viewer in the Security tab and filter the last hour and the user in question.
+  - Explained to the user to go into Credential Manager and delete the old stored credentials that are related to corp.local, fs01, Outlook, Microsoft office, RDP, VPN
+  - On iPhone go to Settings -> mail and Turn Off mail and wait 30 seconds and then turn it back on. Re-enter credentials.
+  - Do the same for Teams and Outlook.
+  - Disconnect VPN and remove credentials in Credential Manager related to VPN. Open VPN back up and re-enter credentials.
+  - Watch Event Viewer for Event ID 4740. Wait for 30 minutes and confirm no more errors happen.
+Resolution: "Explained to user the problem and solved the issue through accessing their PC through windows server and guiding them how to remove old credentials on PC and iPhone."
+Status: "Closed"
