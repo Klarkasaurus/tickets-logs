@@ -16,3 +16,30 @@ Action:
   - Watch Event Viewer for Event ID 4740. Wait for 30 minutes and confirm no more errors happen.
 Resolution: "Explained to user the problem and solved the issue through accessing their PC through windows server and guiding them how to remove old credentials on PC and iPhone."
 Status: "Closed"
+
+# User can't log in
+TicketID: "022"
+Date: "2025-12-31 15:30"
+Title: "Users can’t log in, domain not available"
+Symptom/Message:"When I try to log in, it says:
+‘The domain corp.local is not available’
+Some people can log in if they unplug the network cable and log in offline, but then they can’t access files or email.”
+Diagnosis:
+  - No APIPA (169.x.x.x) addresses observed, confirming DHCP service was operational
+  - DNS servers on client machines were set to 8.8.8.8 instead of the domain controller
+  - DHCP IPv4 scope option 006 showed DNS servers configured as 8.8.8.8 and 8.8.4.4
+Actions:
+  - Ping corp.local to confirm name resolution failure
+  - Run ipconfig /all on affected machines to verify DNS configuration
+  - Checked DHCP settings on Windows Server (IPv4 -> Scope Options)
+  - Removed public DNS servers (8.8.8.8, 8.8.4.4) from DHCP scope
+  - Configured DHCP DNS servers to point to DC01 (10.0.0.10)
+  - Forced client DHCP and DNS refresh using:
+  - ipconfig /release
+  - ipconfig /renew
+  - ipconfig /flushdns
+  - gpupdate /force
+  - Used Invoke-Command to refresh settings on multiple machines remotely
+  - Verified resolution using nslookup corp.local
+Resolution: "Root cause was an incorrect DHCP scope configuration pointing clients to public DNS servers. DNS settings were corrected to use the domain controller, restoring domain authentication, Group Policy processing, and access to network resources."
+Status: "Closed"
